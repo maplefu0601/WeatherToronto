@@ -17,7 +17,7 @@ This starter kit provides a number of **npm** scripts to make your development w
 
 ## Additional Info
 
-![alt text](https://github.com/maplefu0601/WeatherToronto/demoPage.png "Demo page")
+![alt text](https://github.com/maplefu0601/WeatherToronto/weather.png "Demo page")
 
 
 
