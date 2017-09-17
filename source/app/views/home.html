@@ -4,7 +4,8 @@
 <div>
 	<label for='cityName'>City Name:</label>
 	<input id='cityName' ng-model='location.cityName' ng-keyup='$event.keyCode===13?doGetWeather():null'/>
-
+	<button ng-click='doGetWeather()'>Go Forecast</button>
+	
 	<div class='unit-container'>
 		<label class='unit'>
 		    <input type="radio" ng-model="unit.type" ng-value="imperial">
