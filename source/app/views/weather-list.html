@@ -1,0 +1,21 @@
+<div class='panel'>
+	<div class='panel-heading'>{{parseDate(data.dt) | date:'yyyy-MM-dd EEEE'}}</div>
+	
+	<div class=panel-body>
+		<div ng-click=changeUnit({type:unit.type})>{{calByUnit(data.temp.day)}}</div>
+		<div>{{data.weather[0].main}} , {{data.weather[0].description}}</div>
+		<img ng-src='{{getIconUrl(data.weather[0].icon)}}' />
+		<span>{{calByUnit(data.temp.min)}} to {{calByUnit(data.temp.max)}}</span>
+	</div>
+	<div class='panel-footer'>
+		<div class='small-hori'>Day: {{calByUnit(data.temp.day)}}</div>
+		<div class='small-hori'>Morning: {{calByUnit(data.temp.morn)}}</div>
+		<div class='small-hori'>Evening: {{calByUnit(data.temp.eve)}}</div>
+		<div class='small-hori'>Night: {{calByUnit(data.temp.night)}}</div>
+		<div class='small-hori'>Pressure: {{data.pressure}} hPa</div>
+		<div class='small-hori'>Humidity: {{data.humidity}}%</div>
+		<div class='small-hori'><span>Wind direction: {{data.deg}}</span>  Speed: {{data.speed}} km/h</div>
+		
+	</div>
+
+</div>

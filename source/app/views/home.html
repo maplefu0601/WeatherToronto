@@ -1,0 +1,25 @@
+
+
+<h1>{{location.cityName}} Weather Forecast</h1>
+<div>
+	<label for='cityName'>City Name:</label>
+	<input id='cityName' ng-model='location.cityName' ng-keyup='$event.keyCode===13?doGetWeather():null'/>
+
+	<div class='unit-container'>
+		<label class='unit'>
+		    <input type="radio" ng-model="unit.type" ng-value="imperial">
+		    °F
+		</label><br/>
+		<label class='unit'>
+		    <input type="radio" ng-model="unit.type" value="metric">
+		    °C
+		</label><br/>
+	</div>
+
+	<div id='weather-content'>
+		<div ng-show='notFound' class='notFound'>{{error}}</div>
+		<weather-list ng-hide='notFound' ng-repeat='data in weatherData' data="data" unit="unit" changeUnit="changeUnit(type)")></weather-list>
+		
+	</div>
+
+</div>

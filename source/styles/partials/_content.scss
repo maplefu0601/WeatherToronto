@@ -1,0 +1,43 @@
+#content {
+		
+	h1 {
+		color:#333;
+		padding:0;
+		margin:0;
+	}
+}
+.unit-container {
+	display: inline-flex;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.unit {
+	margin-left: 20px;
+	display: inline-block;
+}
+.notFound {
+	color: #FF0000;
+	font-size: 36px;
+}
+#weather-content {
+	.panel {
+		width: 100%;
+		background-color: #555555;
+		color: #eeeeee;
+		font-size: 20px;
+	}
+	.panel-heading {
+		background-color: #558855;
+		font-size: 24px;
+	}
+	.panel-body {
+		text-align: center;
+	}
+	.panel-footer {
+		background-color: #558855;
+		font-size: 12px;
+	}
+	.small-hori {
+		display: inline-block;
+	}
+}
