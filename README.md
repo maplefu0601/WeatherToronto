@@ -14,12 +14,10 @@ This starter kit provides a number of **npm** scripts to make your development w
 **`npm run start`** ~ Builds a debug version of the project and makes it available at [http://localhost:3000](http://localhost:3000).
 
 
-You can modify the behavior of the above scripts by editing either of the following configuration files:
-
-- build-config.js
-- tests/karma.conf.js
 
 ## Additional Info
+
+![alt text](https://github.com/maplefu0601/WeatherToronto/demoPage.png "Demo page")
 
 
 
