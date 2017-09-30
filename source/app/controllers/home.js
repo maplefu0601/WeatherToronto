@@ -16,10 +16,10 @@ angular.module('controllers').controller('HomeController', ['$scope', 'WeatherSe
 
     $scope.iconBaseUrl = 'http://openweathermap.org/img/w/';
 
-    $scope.doGetWeather = function($event) {
-    	let cityName = $scope.location.cityName || 'Toronto';
-    	let country = $scope.location.country || 'ca';
-    	let unit = $scope.unit.type || 'metric';
+    $scope.doGetWeather = function() {
+    	var cityName = $scope.location.cityName || 'Toronto';
+    	var country = $scope.location.country || 'ca';
+    	var unit = $scope.unit.type || 'metric';
     	$scope.notFound = false;
 
     	getWeatherForecast(cityName, country, unit);

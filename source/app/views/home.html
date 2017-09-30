@@ -16,10 +16,11 @@
 		    °C
 		</label><br/>
 	</div>
+	
 
 	<div id='weather-content'>
 		<div ng-show='notFound' class='notFound'>{{error}}</div>
-		<weather-list ng-hide='notFound' ng-repeat='data in weatherData' data="data" unit="unit" changeUnit="changeUnit(type)")></weather-list>
+		<weather-list ng-hide='notFound' ng-repeat='data in weatherData' data="data" unit="unit" change-unit="changeUnit(type)")></weather-list>
 		
 	</div>
 

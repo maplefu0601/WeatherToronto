@@ -12,7 +12,7 @@ describe('weather service', function () {
         country: 'ca'
     };
     var apiKey = '8caa3a62ba1f3b52d931888f38d1bc75';
-    var apiUrl = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=Toronto&appid='+apiKey;
+    var apiUrl = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=Toronto,ca&cnt=5&units=metric&appid='+apiKey;
 
     beforeEach(module('services'));
 
@@ -29,33 +29,33 @@ describe('weather service', function () {
 
     describe('method getWeather', function() {
 
-        it('should return json format data as expected', function (done) {
+        it('should return json format data as expected', inject(function(WeatherService, $httpBackend) {
 
-            //httpBackend.when('GET', apiUrl).respond({"city":{"name":"Toronto"},"list":[{},{}]});
-            httpBackend.expectGET(apiUrl);
+            $httpBackend.when('GET', apiUrl).respond({"city":{"name":"Toronto"},"list":[{},{}]});
+            //httpBackend.expectGET(apiUrl);
 
-            service.getWeather($scope.location.cityName, $scope.location.country, $scope.unit.type).then(function (data) {
-                expect(data.city.name).toEqual('Toronto');
-                done();
+            WeatherService.getWeather($scope.location.cityName, $scope.location.country, $scope.unit.type).then(function (data) {
+                expect(data).toBeDefined();
+                
             });
-            httpBackend.flush();
+            $httpBackend.flush();
 
 
 
-        });
+        }));
 
-        it('returns 404 correctly', function (done) {
+        it('returns 404 correctly', inject(function(WeatherService, $httpBackend) {
 
             httpBackend.when('GET', apiUrl).respond(404);
 
-            service.getWeather($scope.location.cityName, $scope.location.country, $scope.unit.type).catch(function (err) {
+            WeatherService.getWeather($scope.location.cityName, $scope.location.country, $scope.unit.type).catch(function (err) {
                 expect(err).toEqual('not found');
-                done();
+                
             });
 
             httpBackend.flush();
 
-        });
+        }));
 
     });
 

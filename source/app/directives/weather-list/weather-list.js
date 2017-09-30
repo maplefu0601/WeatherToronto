@@ -19,7 +19,7 @@ angular.module('lists', []).directive('weatherList', function () {
         scope: {
             data: '=',
             unit: '=',
-            changeUnit: '&'
+            changeunit: '&changeUnit'
         },
         
         templateUrl: 'views/weather-list.html'

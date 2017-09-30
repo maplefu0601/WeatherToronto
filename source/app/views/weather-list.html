@@ -2,7 +2,7 @@
 	<div class='panel-heading'>{{parseDate(data.dt) | date:'yyyy-MM-dd EEEE'}}</div>
 	
 	<div class=panel-body>
-		<div ng-click=changeUnit({type:unit.type})>{{calByUnit(data.temp.day)}}</div>
+		<div ng-click=changeunit({type:unit.type})>{{calByUnit(data.temp.day)}}</div>
 		<div>{{data.weather[0].main}} , {{data.weather[0].description}}</div>
 		<img ng-src='{{getIconUrl(data.weather[0].icon)}}' />
 		<span>{{calByUnit(data.temp.min)}} to {{calByUnit(data.temp.max)}}</span>

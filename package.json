@@ -50,7 +50,8 @@
     "yargs": "~3.5.4"
   },
   "scripts": {
-    "start": "gulp --gulpfile ./build-scripts/gulpfile.js run-debug"
+    "start": "gulp --gulpfile ./build-scripts/gulpfile.js run-debug",
+    "unit": "gulp --gulpfile ./build-scripts/gulpfile.js run-unit-tests"
   },
   "engines": {
     "node": ">0.12"
